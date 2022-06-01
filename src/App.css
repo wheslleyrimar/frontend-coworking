@@ -1,38 +1,105 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root{
+  min-height: 100%;
+}
+
+body {
+  background: #000 url('./assets/background.jpg') no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+  -webkit-font-smoothing: antialiased !important;
+
+}
+
+body, input, button{
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.logo{
+  font-family: 'Comfortaa', cursive;
+  font-size: 4em;
+  color: #3359EC;
+  height:150px;
   text-align: center;
+  margin-top: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
+  margin: 80px auto 0;
+  max-width: 450px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
 }
 
-.App-link {
-  color: #61dafb;
+.content{
+  width: 100%;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: rgba(0,0,0,.5) 1px 1px 15px;
+   
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content > p{
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.content > form{
+  display: flex;
+  flex-direction: column;
+}
+
+.content form label{
+  font-size: 14px;
+  color: #444;
+  font-weight:  bold;
+  margin-bottom: 8px;
+}
+
+.content form label span{
+  font-weight: normal;
+  color: #999;
+  font-size: 12px;
+}
+
+.content form input{
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 45px;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.content button.btn{
+  border: 0;
+  border-radius: 4px;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #3359EC;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+.content button.btn:hover{
+  background:blue;
 }
