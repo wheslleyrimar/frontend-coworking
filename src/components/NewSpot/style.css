@@ -3,7 +3,7 @@ label#thumbnail{
     border: 1px dashed #ddd;
     background-size: cover;
     cursor: pointer;
-    height: 160px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,8 +14,8 @@ label#thumbnail input{
 }
 
 label#thumbnail .cam{
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
 }
 
 label#thumbnail.has-thumbnail{

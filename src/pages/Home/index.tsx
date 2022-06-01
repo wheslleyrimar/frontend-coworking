@@ -18,13 +18,14 @@ function Home() {
     }
     return (
         <>
-            <p>Ofereça <strong>spots</strong> para devs e encontre <strong>os melhores</strong> talentos</p>
+            <p>Cadastre <strong>espaços</strong> para devs e encontre <strong>grandes</strong> profissionais</p>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email">E-mail *</label>
                 <input                 
                     autoComplete='off'
                     type="email"
                     id="email"
+                    placeholder='Informe o seu melhor e-mail'
                     value={email}
                     onChange={event => setEmail(event.target.value)}
                     required
