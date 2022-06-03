@@ -6,6 +6,7 @@ import './style.css';
 type Response = {
     _id: string;
     thumbnail_url: string;
+    techs: string[];
     company: string;
     price: number;
 }
@@ -30,6 +31,12 @@ function Dashboard() {
                     <li key={spot._id}>
                         <header style={{ backgroundImage: `url(${spot.thumbnail_url})` }} />
                         <strong>{spot.company}</strong>
+                        <span><b>Techs:</b> {spot.techs.map((tech, index) => {
+                            if (index === spot.techs.length - 1) {
+                                return tech + '.';
+                            }
+                            return tech + ', ';
+                        })}</span>
                         <span>{spot.price ? `R$${spot.price}/dia` : 'GRATUITO'}</span>
                     </li>
                 ))}
