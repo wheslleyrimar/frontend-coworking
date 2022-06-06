@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, SyntheticEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import camera from '../../assets/camera.png';
@@ -16,7 +16,7 @@ function NewSpot() {
         return thumbnail ? URL.createObjectURL(thumbnail[0]) : null;
     }, [thumbnail]
     )
-    async function handleSubmit(event: React.FormEvent) {
+    async function handleSubmit(event: SyntheticEvent) {
         event.preventDefault();
         const data = new FormData();
         const user_id = localStorage.getItem('user');
